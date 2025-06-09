@@ -1,0 +1,28 @@
+Task 5 – Wireshark Protocol Analysis Report
+
+Protocols Identified:
+1. DNS (Domain Name System)
+   - Function: Translates domain names to IP addresses.
+   - Packet Type: Query and Response
+   - Example: Query for "google.com" with a response IP.
+
+2. TCP (Transmission Control Protocol)
+   - Function: Reliable, ordered communication.
+   - Packet Type: SYN, ACK, FIN, data packets.
+   - Example: 3-way handshake observed with destination port 80/443.
+
+3. HTTP (HyperText Transfer Protocol)
+   - Function: Used for loading web pages.
+   - Packet Type: GET and Response.
+   - Example: GET request to `example.com`.
+
+Filtering Used:
+- `dns` → Showed DNS queries/responses
+- `tcp` → Showed connection-level traffic
+- `http` → Showed HTTP GET and responses
+
+Observations:
+- DNS queries were triggered immediately on typing a domain.
+- TCP handshake was observed before data transmission.
+- HTTP requests followed successful TCP setup.
+
